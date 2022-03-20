@@ -1,5 +1,6 @@
 let Blockchain= require("./Blockchain");
 //import {Blockchain}
+//hashing
 let hash = require('object-hash');
 let blockchain= new Blockchain.Blockchain();
 let PROOF = 1560;
@@ -29,9 +30,5 @@ let PROOF = 1560;
         {
         let prevHash= blockchain.lastblock().hash ? blockchain.lastblock().hash : null;
         blockchain.addnewblock(prevHash)
-        } 
+        }
         console.log("chain : ", blockchain.chain);
-
-    
-
-
